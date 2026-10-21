@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(90deg, #ff00ff, #00ffcc);
+    padding: 20px 0;
+    box-shadow: 0 0 20px #ff00ff;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 0 30px #00ffcc;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in;
+}
+
+h2 {
+    text-align: center;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a3e;
+    color: #ffffff;
+    font-size: 1em;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ffcc;
+    background: #3a3a4e;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    box-shadow: 0 0 20px #00ffcc;
+    transform: scale(1.05);
+}
+
+.error {
+    color: #ff0066;
+    text-shadow: 0 0 10px #ff0066;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: shake 0.5s ease;
+}
+
+.success {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #ff00ff, #00ffcc);
+    text-align: center;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff, 0 0 30px #ff0066;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff, 0 0 40px #ff0066;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}

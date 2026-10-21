@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2, h3 {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #ff00ff;
+    text-align: center;
+    margin: 20px 0;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffcc;
+    margin: 20px auto;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ff00ff;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background: rgba(42, 42, 62, 0.5);
+}
+
+tr:hover {
+    background: rgba(0, 255, 204, 0.2);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a3e;
+    color: #ffffff;
+    font-size: 1em;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: all 0.3s ease;
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ffcc;
+    background: #3a3a4e;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    box-shadow: 0 0 20px #00ffcc;
+    transform: scale(1.05);
+}
+
+.error {
+    color: #ff0066;
+    text-shadow: 0 0 10px #ff0066;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 0, 102, 0.2);
+    border-radius: 5px;
+    animation: shake 0.5s ease;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #ff00ff;
+    color: #ff00ff;
+}
+
+small {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ffcc;
+    font-size: 0.8em;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff, 0 0 30px #ff0066;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff, 0 0 40px #ff0066;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}

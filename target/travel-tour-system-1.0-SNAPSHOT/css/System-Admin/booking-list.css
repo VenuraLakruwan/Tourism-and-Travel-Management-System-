@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3, h4 {
+    color: #00ffcc;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ff00ff;
+    color: #fff;
+}
+
+th {
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    text-shadow: 0 0 5px #000;
+}
+
+tr:nth-child(even) {
+    background: rgba(42, 42, 62, 0.5);
+}
+
+tr:hover {
+    background: rgba(0, 255, 204, 0.2);
+}
+
+input[type="submit"] {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #00ffcc, #00cc99);
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+input[type="submit"][value="Cancel"] {
+    background: linear-gradient(45deg, #ff0066, #cc0055);
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+.success {
+    color: #00ffcc;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(0, 255, 204, 0.2);
+    border-radius: 5px;
+}
+
+.error {
+    color: #ff0066;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 0, 102, 0.2);
+    border-radius: 5px;
+}
+
+.info {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.info ul li {
+    margin: 10px 0;
+    color: #fff;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+p {
+    text-align: center;
+    color: #fff;
+}
+
+span[style*="color: orange"] {
+    color: #ffcc00 !important;
+}
+
+span[style*="color: green"] {
+    color: #00ffcc !important;
+}
+
+span[style*="color: red"] {
+    color: #ff0066 !important;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff; }
+    to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff; }
+}

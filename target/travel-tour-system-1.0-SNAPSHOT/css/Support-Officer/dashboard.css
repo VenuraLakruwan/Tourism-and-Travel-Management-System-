@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+header h1 {
+    color: #00ffcc;
+    margin: 0;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ffcc;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    color: #00ffcc;
+}
+
+nav ul li ul li a:hover {
+    color: #ff00ff;
+}
+
+h2, h3 {
+    color: #00ffcc;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ff00ff;
+    color: #fff;
+}
+
+th {
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    text-shadow: 0 0 5px #000;
+}
+
+tr:nth-child(even) {
+    background: rgba(42, 42, 62, 0.5);
+}
+
+tr:hover {
+    background: rgba(0, 255, 204, 0.2);
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.quick-action {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #00ffcc;
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+.quick-action h3 {
+    margin: 10px 0;
+}
+
+.quick-action a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.quick-action a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+footer p {
+    margin: 0;
+    color: #00ffcc;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff; }
+    to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff; }
+}

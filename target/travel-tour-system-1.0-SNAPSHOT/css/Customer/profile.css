@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #00ffcc;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc;
+    margin: 20px auto;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid #ff00ff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: rgba(42, 42, 62, 0.5);
+}
+
+tr:hover {
+    background: rgba(0, 255, 204, 0.2);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a3e;
+    color: #fff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ffcc;
+    background: #3a3a4e;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    color: #fff;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+.success {
+    color: #00ffcc;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(0, 255, 204, 0.2);
+    border-radius: 5px;
+}
+
+.error {
+    color: #ff0066;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 0, 102, 0.2);
+    border-radius: 5px;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff; }
+    to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff; }
+}

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #00ffcc;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ff00ff;
+    color: #fff;
+}
+
+th {
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    text-shadow: 0 0 5px #000;
+}
+
+tr:nth-child(even) {
+    background: rgba(42, 42, 62, 0.5);
+}
+
+tr:hover {
+    background: rgba(0, 255, 204, 0.2);
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.quick-action {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #00ffcc;
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+.quick-action h3 {
+    margin: 10px 0;
+}
+
+.quick-action a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.quick-action a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.btn-approve, .btn-reject {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.btn-approve {
+    background: linear-gradient(45deg, #00ffcc, #00cc99);
+}
+
+.btn-reject {
+    background: linear-gradient(45deg, #ff0066, #cc0055);
+}
+
+.btn-approve:hover, .btn-reject:hover {
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff; }
+    to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff; }
+}

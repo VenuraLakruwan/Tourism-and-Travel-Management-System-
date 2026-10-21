@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff0066;
+    margin-bottom: 20px;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 30px #00ffcc;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a3e;
+    color: #ffffff;
+    font-size: 1em;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ffcc;
+    background: #3a3a4e;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff00ff, #00ffcc);
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 20px #00ffcc;
+    transform: scale(1.05);
+}
+
+p.error {
+    color: #ff0066;
+    text-shadow: 0 0 10px #ff0066;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: shake 0.5s ease;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff, 0 0 30px #ff0066;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff, 0 0 40px #ff0066;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}

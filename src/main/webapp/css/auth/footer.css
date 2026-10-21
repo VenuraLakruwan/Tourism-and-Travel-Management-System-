@@ -1,0 +1,44 @@
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #ff00ff, #00ffcc);
+    text-align: center;
+    box-shadow: 0 0 20px #ff00ff;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ffcc;
+    font-size: 1em;
+}
+
+footer a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px #ff00ff;
+    color: #ff00ff;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff;
+    }
+}
